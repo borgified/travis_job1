@@ -1,3 +1,5 @@
 language: minimal
+env:
+  MYVAR=old_var_job1
 script:
   - echo "hello world"
