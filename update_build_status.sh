@@ -4,10 +4,10 @@ set -e
 
 body=$(cat <<EOF
 {
-  "state": "pending",
-  "target_url": "https://github.com/borgified/travis_job1/builds/$TRAVIS_BUILD_ID",
+  "state": "$STATE",
+  "target_url": "https://travis-ci.com/$TRAVIS_REPO_SLUG/builds/$TRAVIS_BUILD_ID",
   "description": "The build is pending!",
-  "context": "continuous-integration/travis"
+  "context": "$TRAVIS_REPO_SLUG"
 }
 EOF
 )

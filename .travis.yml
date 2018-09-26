@@ -8,4 +8,9 @@ script:
   - echo "$MYVAR"
   - printenv | grep ^TRAVIS_
     #  - ./run.sh
-  - ./update_build_status.sh
+
+after_success:
+  - STATE=success ./update_build_status.sh
+
+after_failure:
+  - STATE=failure ./update_build_status.sh
