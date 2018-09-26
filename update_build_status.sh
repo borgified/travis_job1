@@ -2,7 +2,7 @@
 
 set -e
 
-read -r -d '' body <<EOF
+body=$(cat <<EOF
 {
   "state": "pending",
   "target_url": "https://github.com/borgified/travis_job1/builds/$TRAVIS_BUILD_ID",
@@ -10,6 +10,7 @@ read -r -d '' body <<EOF
   "context": "continuous-integration/travis"
 }
 EOF
+)
 
 REPO="https://api.github.com/repos/$UPSTREAM_REPO/statuses/$UPSTREAM_SHA"
 
