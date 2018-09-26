@@ -6,7 +6,7 @@ body=$(cat <<EOF
 {
   "state": "$STATE",
   "target_url": "https://travis-ci.com/$TRAVIS_REPO_SLUG/builds/$TRAVIS_BUILD_ID",
-  "description": "The build is pending!",
+  "description": "The build is $STATE!",
   "context": "$TRAVIS_REPO_SLUG"
 }
 EOF
