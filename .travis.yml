@@ -4,10 +4,14 @@ env:
   MYVAR=old_var_job1
   UPSTREAM_REPO=""
   UPSTREAM_SHA=""
+
+before_script:
+  - STATE=pending ./update_build_status.sh
+
 script:
   - echo "$MYVAR"
   - printenv | grep ^TRAVIS_
-    #  - ./run.sh
+  - ./sleep.sh
 
 after_success:
   - STATE=success ./update_build_status.sh
