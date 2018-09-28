@@ -11,7 +11,7 @@ before_script:
 script:
   - echo "$MYVAR"
   - printenv | grep ^TRAVIS_
-  - ./sleep.sh
+    #  - ./sleep.sh
 
 after_success:
   - STATE=success ./update_build_status.sh
