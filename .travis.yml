@@ -5,16 +5,6 @@ env:
   UPSTREAM_REPO=""
   UPSTREAM_SHA=""
 
-before_script:
-  - STATE=pending ./update_build_status.sh
-
 script:
   - echo "$MYVAR"
   - printenv | grep ^TRAVIS_
-    #  - ./sleep.sh
-
-after_success:
-  - STATE=success ./update_build_status.sh
-
-after_failure:
-  - STATE=failure ./update_build_status.sh
