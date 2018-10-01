@@ -6,6 +6,4 @@ env:
   UPSTREAM_SHA=""
 
 script:
-  - echo "$DEFAULT_SETTING"
-  - echo "$SPECIAL_SETTING"
   - printenv | grep ^TRAVIS_
