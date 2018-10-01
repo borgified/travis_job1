@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-seconds=30
+seconds=10
 echo "sleeping for $seconds..."
 sleep $seconds
