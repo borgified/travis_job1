@@ -1,9 +1,7 @@
 language: minimal
 
 env:
-  SPECIAL_SETTING=job1
-  UPSTREAM_REPO=""
-  UPSTREAM_SHA=""
+  SPECIAL_SETTING: job1
 
 script:
   - printenv | grep ^TRAVIS_
