@@ -1,3 +1,4 @@
+language: go
 os: windows
 
 script:
