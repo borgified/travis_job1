@@ -4,4 +4,4 @@ os: windows
 script:
   - choco install windows-sdk-10.0
   - choco install microsoft-build-tools
-  - Resolve-Path  "C:\Program Files*\Windows Kits\*\bin\*\signtool.exe"
+  - "C:\Program Files*\Windows Kits\*\bin\*\signtool.exe"
